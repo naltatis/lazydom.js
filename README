@@ -1,0 +1,20 @@
+HTML
+
+    <div>
+        <h1>hello ...</h1>
+        <script type="text/html">
+			<!-- elements/images that don't need to be rendered/loaded initially -->
+            <h2>... world</h2>
+            <img src="http://www.google.de/images/logos/ps_logo2.png">
+        </script>
+    </div>
+
+
+JavaScript
+
+    $('div').lazydom();
+
+    // initialzing on click instead of mouseenter
+    $('div').lazydom({event: 'click'});    
+
+`lazydom` will replace the `<script>` with its content when the event is triggered.
